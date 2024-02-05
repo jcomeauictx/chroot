@@ -6,7 +6,7 @@ files="/etc/mtab"
 for dir in $dirs $files; do
 	sudo mount --bind $dir $chrootdir$dir
 done
-sudo chroot $chrootdir /bin/bash -c "su --login $username"
+sudo chroot $chrootdir /bin/bash -c "su - $username"
 for dir in $(echo $dirs $files | tr " " "\n" | tac); do
 	sudo umount $chrootdir$dir
 done
