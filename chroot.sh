@@ -1,5 +1,5 @@
 #!/bin/bash -x
-chrootdir="${1:-/opt/stretch32}"
+chrootdir="${1:-/opt/buster64}"
 username="${2:-$USER}"
 dirs="/proc /sys /dev /home /usr/src /mnt"
 files="/etc/mtab"
