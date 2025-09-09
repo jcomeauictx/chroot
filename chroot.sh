@@ -1,7 +1,7 @@
 #!/bin/bash -x
 chrootdir="${1:-/opt/buster64}"
 username="${2:-$USER}"
-dirs="/proc /sys /dev /home /usr/src /mnt"
+dirs="/proc /sys /dev /dev/pts /dev/shm /home /usr/src /mnt"
 files="/etc/mtab"
 for dir in $dirs $files; do
 	sudo mount --bind $dir $chrootdir$dir
